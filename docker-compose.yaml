@@ -1,0 +1,16 @@
+version: '3'
+networks:
+  app-network:
+services:
+  app:
+    image: hseeberger/scala-sbt:8u222_1.3.5_2.13.1
+    logging:
+      driver: json-file
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    networks:
+      - app-network
+    working_dir: /app
+    command: sbt "runMain bbst.BootStart"

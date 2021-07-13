@@ -4,7 +4,7 @@ name := "akka-learn"
 
 version := "0.1"
 
-scalaVersion := "2.13.6"
+scalaVersion := "2.13.1"
 
 libraryDependencies ++= {
   val akkaVersion = "2.6.15"
@@ -23,3 +23,5 @@ libraryDependencies ++= {
     "org.scalatestplus" %% "mockito-3-4" % "3.2.9.0" % Test
   )
 }
+
+mainClass in (run) := Some("bbst.BootStart")
